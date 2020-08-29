@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template match="/">
+  <html>
+  <body>
+  <h2>What tools are available</h2>
+    <table border="1">
+      <tr bgcolor="#9acd32">
+        <th style="text-align:left">Tools</th>
+        <th style="text-align:left">Name</th>
+      </tr>
+      <xsl:for-each select="toolsData/tools"><tr>
+      <xsl:variable name="toolName" select="toolName" />              
+      <xsl:variable name="toolsData" select="toolsData" /
+      <xsl:variable name="language" select="//toolsData/tools[toolName=$toolname]" /
+>
+      <xsl:if test="$toolsData/language='JS'">
+        <td><xsl:value-of select="toolName"/></td>
+        <td><xsl:value-of select="toolType"/></td>
+        <td><xsl:value-of select="language"/></td>
+      </xsl:if>
+      </tr>
+      </xsl:for-each>
+    </table>
+  </body>
+  </html>
+</xsl:template>
+</xsl:stylesheet
