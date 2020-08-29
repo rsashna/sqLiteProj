@@ -1,0 +1,482 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element name="toolsData" type="toolsType">
+  <xs:key name="toolKey">
+    <xs:selector xpath = "tools"/>
+    <xs:field xpath = "toolName "/>
+  </xs:key>
+</xs:element>
+
+<xs:complexType name="toolsType">
+    <xs:sequence>
+        <xs:element ref="tools" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:element name="tools">
+     <xs:complexType>
+          <xs:sequence>
+              <xs:element name="toolName " type="xs:string"/>
+              <xs:element name="toolType" type="xs:string"/>
+              <xs:element name="language" type="xs:string"/>
+          </xs:sequence>
+     </xs:complexType>
+</xs:element>
+<!--  -->
+<xs:element name="multimediaData" type="multimediaType">
+  <xs:key name="mulKey">
+    <xs:selector xpath = "multimedia"/>
+    <xs:field xpath = "type "/>
+  </xs:key>
+</xs:element>
+
+<xs:complexType name="multimediaType">
+    <xs:sequence>
+        <xs:element ref="multimedia" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:element name="multimedia">
+     <xs:complexType>
+          <xs:sequence>
+              <xs:element name="type " type="xs:string"/>
+          </xs:sequence>
+     </xs:complexType>
+</xs:element>
+<!--  -->
+<xs:element name="categoryData" type="categoryType">
+  <xs:key name="catKey">
+    <xs:selector xpath = "category"/>
+    <xs:field xpath = "webType "/>
+  </xs:key>
+</xs:element>
+
+<xs:complexType name="categoryType">
+    <xs:sequence>
+        <xs:element ref="category" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:element name="category">
+     <xs:complexType>
+          <xs:sequence>
+              <xs:element name="webType " type="xs:string"/>
+          </xs:sequence>
+     </xs:complexType>
+</xs:element>
+<!--  -->
+<xs:element name="websiteData" type="websiteType">
+  <xs:key name="websiteKey">
+    <xs:selector xpath = "website"/>
+    <xs:field xpath = "url"/>
+  </xs:key>
+  <xs:keyref name="companyIDFKey1" refer="websiteKey">
+    <xs:selector xpath = "company"/>
+    <xs:field xpath = "companyID"/>
+  </xs:keyref>
+</xs:element>
+
+<xs:complexType name="websiteType">
+    <xs:sequence>
+        <xs:element ref="website" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:element name="website">
+     <xs:complexType>
+          <xs:sequence>
+              <xs:element name="url " type="xs:string"/>
+              <xs:element name="pubDate " type="xs:date"/>
+              <xs:element name="companyID " type="xs:integer"/>
+          </xs:sequence>
+     </xs:complexType>
+</xs:element>
+<!--  -->
+<xs:element name="ceoData" type="ceoType">
+  <xs:key name="ceoKey">
+    <xs:selector xpath = "ceo"/>
+    <xs:field xpath = "employeeID"/>
+  </xs:key>
+</xs:element>
+
+<xs:complexType name="ceoType">
+    <xs:sequence>
+        <xs:element ref="ceo" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:element name="ceo">
+     <xs:complexType>
+          <xs:sequence>
+              <xs:element name="employeeID " type="xs:integer"/>
+              <xs:element name="firstName " type="xs:string"/>
+              <xs:element name="lastName " type="xs:string"/>
+          </xs:sequence>
+     </xs:complexType>
+</xs:element>
+<!--  -->
+<xs:element name="companyData" type="companyType">
+  <xs:key name="companyKey">
+    <xs:selector xpath = "company"/>
+    <xs:field xpath = "registeredName"/>
+  </xs:key>
+  <xs:keyref name="ceoIDFKey2" refer="companyKey">
+    <xs:selector xpath = "ceo"/>
+    <xs:field xpath = "employeeID"/>
+  </xs:keyref>
+  <xs:keyref name="ceoNameFKey3" refer="companyKey">
+    <xs:selector xpath = "ceo"/>
+    <xs:field xpath = "employeeID"/>
+  </xs:keyref>
+</xs:element>
+
+<xs:complexType name="companyType">
+    <xs:sequence>
+        <xs:element ref="company" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="ceo" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+</xs:complexType>
+<xs:element name="company">
+     <xs:complexType>
+          <xs:sequence>
+              <xs:element name="companyID " type="xs:integer"/>
+              <xs:element name="registeredName " type="xs:string"/>
+              <xs:element name="countryOrigin " type="xs:string"/>
+              <xs:element name="numberEmployees " type="xs:integer"/>
+              <xs:element name="ceoID " type="xs:integer"/>
+              <xs:element name="ck_ceoName " type="xs:string"/>
+          </xs:sequence>
+     </xs:complexType>
+</xs:element>
+<!--  -->
+<xs:element name="developerData" type="developerType">
+  <xs:key name="developerKey">
+    <xs:selector xpath = "developer"/>
+    <xs:field xpath = "employeeID"/>
+  </xs:key>
+  <xs:keyref name="devLeadFKey4" refer="developerKey">
+    <xs:selector xpath = "developer"/>
+    <xs:field xpath = "employeeID"/>
+  </xs:keyref>
+  <xs:keyref name="companyIDFKey5" refer="developerKey">
+    <xs:selector xpath = "company"/>
+    <xs:field xpath = "companyID"/>
+  </xs:keyref>
+</xs:element>
+
+<xs:complexType name="developerType">
+    <xs:sequence>
+        <xs:element ref="developer" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="company" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:element name="developer">
+     <xs:complexType>
+          <xs:sequence>
+              <xs:element name="employeeID " type="xs:integer"/>
+              <xs:element name="companyID " type="xs:integer"/>
+              <xs:element name="firstName " type="xs:string"/>
+              <xs:element name="lastName " type="xs:string"/>
+              <xs:element name="expertise " type="xs:string"/>
+              <xs:element name="devLead " type="xs:string"/>
+          </xs:sequence>
+     </xs:complexType>
+</xs:element>
+<!--  -->
+<xs:element name="officeLocationData" type="officeLocationType">
+  <xs:key name="officeLocationKey">
+    <xs:selector xpath = "officeLocation"/>
+    <xs:field xpath = "officeID"/>
+  </xs:key>
+</xs:element>
+<xs:complexType name="officeLocationType">
+    <xs:sequence>
+        <xs:element ref="officeLocation" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:element name="officeLocation">
+     <xs:complexType>
+          <xs:sequence>
+              <xs:element name="officeID " type="xs:integer"/>
+              <xs:element name="postalCode " type="xs:string"/>
+              <xs:element name="country " type="xs:string"/>
+              <xs:element name="city " type="xs:string"/>
+          </xs:sequence>
+     </xs:complexType>
+</xs:element>
+<!--  -->
+<xs:element name="founderData" type="founderType">
+  <xs:key name="founderKey">
+    <xs:selector xpath = "founder"/>
+    <xs:field xpath = "employeeID"/>
+  </xs:key>
+</xs:element>
+<xs:complexType name="founderType">
+    <xs:sequence>
+        <xs:element ref="founder" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:element name="founder">
+     <xs:complexType>
+          <xs:sequence>
+              <xs:element name="employeeID " type="xs:integer"/>
+              <xs:element name="dob" type="xs:date"/>
+              <xs:element name="firstName " type="xs:string"/>
+              <xs:element name="lastName " type="xs:string"/>
+          </xs:sequence>
+     </xs:complexType>
+</xs:element>
+<!--  -->
+<xs:element name="websiteClassifiedData" type="websiteClassifiedType">
+  <xs:key name="websiteClassifiedKey1">
+    <xs:selector xpath = "websiteClassified"/>
+    <xs:field xpath = "url"/>
+  </xs:key>
+  <xs:key name="websiteClassifiedKey2">
+    <xs:selector xpath = "websiteClassified"/>
+    <xs:field xpath = "webType"/>
+  </xs:key>
+  <xs:keyref name="urlFKey6" refer="websiteClassifiedKey1">
+    <xs:selector xpath = "website"/>
+    <xs:field xpath = "url"/>
+  </xs:keyref>
+  <xs:keyref name="webTypeFKey7" refer="websiteClassifiedKey2">
+    <xs:selector xpath = "category"/>
+    <xs:field xpath = "webType"/>
+  </xs:keyref>
+</xs:element>
+
+<xs:complexType name="websiteClassifiedType">
+    <xs:sequence>
+        <xs:element ref="websiteClassified" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="category" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="website" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+</xs:complexType>
+<xs:element name="websiteClassified">
+     <xs:complexType>
+          <xs:sequence>
+              <xs:element name="url " type="xs:string"/>
+              <xs:element name="webType" type="xs:string"/>
+          </xs:sequence>
+     </xs:complexType>
+</xs:element>
+<!--  -->
+<xs:element name="foundedByData" type="foundedByType">
+  <xs:key name="foundedByKey1">
+    <xs:selector xpath = "foundedBy"/>
+    <xs:field xpath = "employeeID"/>
+  </xs:key>
+  <xs:key name="foundedByKey2">
+    <xs:selector xpath = "foundedBy"/>
+    <xs:field xpath = "companyID"/>
+  </xs:key>
+  <xs:keyref name="employeeIDFKey8" refer="foundedByKey1">
+    <xs:selector xpath = "ceo"/>
+    <xs:field xpath = "employeeID"/>
+  </xs:keyref>
+  <xs:keyref name="companyIDFKey9" refer="foundedByKey2">
+    <xs:selector xpath = "company"/>
+    <xs:field xpath = "companyID"/>
+  </xs:keyref>
+</xs:element>
+
+<xs:complexType name="foundedByType">
+    <xs:sequence>
+        <xs:element ref="foundedBy" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="company" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="ceo" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:element name="foundedBy">
+     <xs:complexType>
+          <xs:sequence>
+              <xs:element name="employeeID " type="xs:integer"/>
+              <xs:element name="companyID" type="xs:integer"/>
+          </xs:sequence>
+     </xs:complexType>
+</xs:element>
+<!--  -->
+<xs:element name="companyWebsiteData" type="companyWebsiteType">
+  <xs:key name="companyWebsiteKey1">
+    <xs:selector xpath = "companyWebsite"/>
+    <xs:field xpath = "url"/>
+  </xs:key>
+  <xs:key name="companyWebsiteKey2">
+    <xs:selector xpath = "companyWebsite"/>
+    <xs:field xpath = "companyID"/>
+  </xs:key>
+  <xs:keyref name="urlFKey10" refer="companyWebsiteKey1">
+    <xs:selector xpath = "website"/>
+    <xs:field xpath = "url"/>
+  </xs:keyref>
+  <xs:keyref name="companyIDFKey11" refer="companyWebsiteKey2">
+    <xs:selector xpath = "company"/>
+    <xs:field xpath = "companyID"/>
+  </xs:keyref>
+</xs:element>
+
+<xs:complexType name="companyWebsiteType">
+    <xs:sequence>
+        <xs:element ref="companyWebsite" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="company" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="website" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+</xs:complexType>
+<xs:element name="companyWebsite">
+     <xs:complexType>
+          <xs:sequence>
+              <xs:element name="url " type="xs:string"/>
+              <xs:element name="companyID" type="xs:integer"/>
+          </xs:sequence>
+     </xs:complexType>
+</xs:element>
+<!--  -->
+<xs:element name="companyDevData" type="companyDevType">
+  <xs:key name="companyDevKey1">
+    <xs:selector xpath = "companyDev"/>
+    <xs:field xpath = "employeeID"/>
+  </xs:key>
+  <xs:key name="companyDevKey2">
+    <xs:selector xpath = "companyDev"/>
+    <xs:field xpath = "companyID"/>
+  </xs:key>
+  <xs:keyref name="employeeIDFKey12" refer="companyDevKey1">
+    <xs:selector xpath = "developer"/>
+    <xs:field xpath = "employeeID"/>
+  </xs:keyref>
+  <xs:keyref name="companyIDFKey13" refer="companyDevKey2">
+    <xs:selector xpath = "company"/>
+    <xs:field xpath = "companyID"/>
+  </xs:keyref>
+</xs:element>
+
+<xs:complexType name="companyDevType">
+    <xs:sequence>
+        <xs:element ref="companyDev" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="company" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="developer" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+</xs:complexType>
+<xs:element name="companyDev">
+     <xs:complexType>
+          <xs:sequence>
+              <xs:element name="employeeID" type="xs:integer"/>
+              <xs:element name="companyID" type="xs:integer"/>
+          </xs:sequence>
+     </xs:complexType>
+</xs:element>
+<!--  -->
+<xs:element name="websiteMediaData" type="websiteMediaType">
+  <xs:key name="websiteMediaKey1">
+    <xs:selector xpath = "websiteMedia"/>
+    <xs:field xpath = "url"/>
+  </xs:key>
+  <xs:key name="websiteMediaKey2">
+    <xs:selector xpath = "websiteMedia"/>
+    <xs:field xpath = "type"/>
+  </xs:key>
+  <xs:keyref name="urlFKey14" refer="websiteMediaKey1">
+    <xs:selector xpath = "website"/>
+    <xs:field xpath = "url"/>
+  </xs:keyref>
+  <xs:keyref name="multimediaTypeFKey15" refer="websiteMediaKey2">
+    <xs:selector xpath = "multimedia"/>
+    <xs:field xpath = "type"/>
+  </xs:keyref>
+</xs:element>
+
+<xs:complexType name="websiteMediaType">
+    <xs:sequence>
+        <xs:element ref="websiteMedia" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="website" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="multimedia" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+</xs:complexType>
+<xs:element name="websiteMedia">
+     <xs:complexType>
+          <xs:sequence>
+              <xs:element name="url" type="xs:string"/>
+              <xs:element name="type" type="xs:string"/>
+          </xs:sequence>
+     </xs:complexType>
+</xs:element>
+<!--  -->
+<xs:element name="websiteToolsData" type="websiteToolsType">
+  <xs:key name="websiteToolsKey1">
+    <xs:selector xpath = "websiteTools"/>
+    <xs:field xpath = "url"/>
+  </xs:key>
+  <xs:key name="websiteToolsKey2">
+    <xs:selector xpath = "websiteTools"/>
+    <xs:field xpath = "toolName"/>
+  </xs:key>
+  <xs:keyref name="urlFKey16" refer="websiteToolsKey1">
+    <xs:selector xpath = "website"/>
+    <xs:field xpath = "url"/>
+  </xs:keyref>
+  <xs:keyref name="multimediaTypeFKey17" refer="websiteToolsKey2">
+    <xs:selector xpath = "tools"/>
+    <xs:field xpath = "toolName"/>
+  </xs:keyref>
+</xs:element>
+
+<xs:complexType name="websiteToolsType">
+    <xs:sequence>
+        <xs:element ref="websiteTools" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="website" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="tools" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+</xs:complexType>
+<xs:element name="websiteTools">
+     <xs:complexType>
+          <xs:sequence>
+              <xs:element name="url" type="xs:string"/>
+              <xs:element name="toolName" type="xs:string"/>
+          </xs:sequence>
+     </xs:complexType>
+</xs:element>
+<!--  -->
+<xs:element name="companyLocationData" type="companyLocationType">
+  <xs:key name="companyLocationKey1">
+    <xs:selector xpath = "companyLocation"/>
+    <xs:field xpath = "officeID"/>
+  </xs:key>
+  <xs:key name="companyLocationKey2">
+    <xs:selector xpath = "companyLocation"/>
+    <xs:field xpath = "companyID"/>
+  </xs:key>
+  <xs:key name="companyLocationKey3">
+    <xs:selector xpath = "companyLocation"/>
+    <xs:field xpath = "postalCode"/>
+  </xs:key>
+  <xs:keyref name="officeIDFKey18" refer="companyLocationKey1">
+    <xs:selector xpath = "officeLocation"/>
+    <xs:field xpath = "officeID"/>
+  </xs:keyref>
+  <xs:keyref name="postalCodeFKey19" refer="companyLocationKey3">
+    <xs:selector xpath = "officeLocation"/>
+    <xs:field xpath = "postalCode"/>
+  </xs:keyref>
+</xs:element>
+
+<xs:complexType name="companyLocationType">
+    <xs:sequence>
+        <xs:element ref="companyLocation" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="officeLocation" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+</xs:complexType>
+<xs:element name="companyLocation">
+     <xs:complexType>
+          <xs:sequence>
+              <xs:element name="officeID" type="xs:integer"/>
+              <xs:element name="companyID" type="xs:integer"/>
+              <xs:element name="postalCode" type="xs:string"/>
+          </xs:sequence>
+     </xs:complexType>
+</xs:element>
+</xs:schema>

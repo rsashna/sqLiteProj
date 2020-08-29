@@ -1,0 +1,158 @@
+<xs:element name="tools">
+     <xs:complexType>
+          <xs:sequence>
+              <xs:element name="toolName " type="xs:string"/>
+              <xs:element name="toolType" type="xs:string"/>
+              <xs:element name="language" type="xs:string"/>
+          </xs:sequence>
+     </xs:complexType>
+</xs:element>
+
+<xs:element name="multimedia">
+     <xs:complexType>
+          <xs:sequence>
+              <xs:element name="type " type="xs:string"/>
+          </xs:sequence>
+     </xs:complexType>
+</xs:element>
+
+<xs:element name="category">
+     <xs:complexType>
+          <xs:sequence>
+              <xs:element name="webType " type="xs:string"/>
+          </xs:sequence>
+     </xs:complexType>
+</xs:element>
+
+<xs:element name="website">
+     <xs:complexType>
+          <xs:sequence>
+              <xs:element name="url " type="xs:string"/>
+              <xs:element name="pubDate " type="xs:data"/>
+              <xs:element name="companyID " type="xs:integer"/>
+          </xs:sequence>
+     </xs:complexType>
+</xs:element>
+
+<xs:element name="ceo">
+     <xs:complexType>
+          <xs:sequence>
+              <xs:element name="employeeID " type="xs:integer"/>
+              <xs:element name="firstName " type="xs:string"/>
+              <xs:element name="lastName " type="xs:string"/>
+          </xs:sequence>
+     </xs:complexType>
+</xs:element>
+
+<xs:element name="ceo">
+     <xs:complexType>
+          <xs:sequence>
+              <xs:element name="companyID " type="xs:integer"/>
+              <xs:element name="registeredName " type="xs:string"/>
+              <xs:element name="countryOrigin " type="xs:string"/>
+              <xs:element name="currentWorth " type="xs:integer"/>
+              <xs:element name="numberEmployees " type="xs:integer"/>
+              <xs:element name="ceoID " type="xs:integer"/>
+              <xs:element name="ck_ceoName " type="xs:string"/>
+          </xs:sequence>
+     </xs:complexType>
+</xs:element>
+
+<xs:element name="developer">
+     <xs:complexType>
+          <xs:sequence>
+              <xs:element name="employeeID " type="xs:integer"/>
+              <xs:element name="companyID " type="xs:integer"/>
+              <xs:element name="firstName " type="xs:string"/>
+              <xs:element name="lastName " type="xs:string"/>
+              <xs:element name="expertise " type="xs:string"/>
+              <xs:element name="devLead " type="xs:string"/>
+          </xs:sequence>
+     </xs:complexType>
+</xs:element>
+
+<xs:element name="officeLocation">
+     <xs:complexType>
+          <xs:sequence>
+              <xs:element name="officeID " type="xs:integer"/>
+              <xs:element name="postalCode " type="xs:string"/>
+              <xs:element name="country " type="xs:string"/>
+              <xs:element name="city " type="xs:string"/>
+          </xs:sequence>
+     </xs:complexType>
+</xs:element>
+
+<xs:element name="founder">
+     <xs:complexType>
+          <xs:sequence>
+              <xs:element name="employeeID " type="xs:integer"/>
+              <xs:element name="dob" type="xs:date"/>
+              <xs:element name="firstName " type="xs:string"/>
+              <xs:element name="lastName " type="xs:string"/>
+          </xs:sequence>
+     </xs:complexType>
+</xs:element>
+
+<xs:element name="websiteClassified">
+     <xs:complexType>
+          <xs:sequence>
+              <xs:element name="url " type="xs:string"/>
+              <xs:element name="webType" type="xs:string"/>
+          </xs:sequence>
+     </xs:complexType>
+</xs:element>
+
+<xs:element name="foundedBy">
+     <xs:complexType>
+          <xs:sequence>
+              <xs:element name="employeeID " type="xs:integer"/>
+              <xs:element name="companyID" type="xs:interger"/>
+          </xs:sequence>
+     </xs:complexType>
+</xs:element>
+
+<xs:element name="companyWebsite">
+     <xs:complexType>
+          <xs:sequence>
+              <xs:element name="url " type="xs:string"/>
+              <xs:element name="companyID" type="xs:interger"/>
+          </xs:sequence>
+     </xs:complexType>
+</xs:element>
+
+<xs:element name="companyDev">
+     <xs:complexType>
+          <xs:sequence>
+              <xs:element name="employeeID" type="xs:integer"/>
+              <xs:element name="companyID" type="xs:interger"/>
+          </xs:sequence>
+     </xs:complexType>
+</xs:element>
+
+<xs:element name="websiteMedia">
+     <xs:complexType>
+          <xs:sequence>
+              <xs:element name="url" type="xs:string"/>
+              <xs:element name="type" type="xs:string"/>
+          </xs:sequence>
+     </xs:complexType>
+</xs:element>
+
+<xs:element name="websiteTools">
+     <xs:complexType>
+          <xs:sequence>
+              <xs:element name="url" type="xs:string"/>
+              <xs:element name="toolName" type="xs:string"/>
+          </xs:sequence>
+     </xs:complexType>
+</xs:element>
+
+<xs:element name="companyLocation">
+     <xs:complexType>
+          <xs:sequence>
+              <xs:element name="officeID" type="xs:integer"/>
+              <xs:element name="companyID" type="xs:integer"/>
+              <xs:element name="postalCode" type="xs:string"/>
+          </xs:sequence>
+     </xs:complexType>
+</xs:element>

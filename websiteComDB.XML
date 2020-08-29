@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<toolsData>
+
+    <tools>
+      <toolName>Vue</toolName>
+      <toolType>framework</toolType>
+      <language>JS</language>
+    </tools>
+    <tools>
+      <toolName>Ember</toolName>
+      <toolType>framework</toolType>
+      <language>JS</language>
+    </tools>
+    <tools>
+      <toolName>Angular</toolName>
+      <toolType>framework</toolType>
+      <language>JS</language>
+    </tools>
+    <tools>
+      <toolName>React</toolName>
+      <toolType>framework</toolType>
+      <language>JS</language>
+    </tools>
+    <tools>
+      <toolName>Backbone</toolName>
+      <toolType>framework</toolType>
+      <language>JS</language>
+    </tools>
+
+</toolsData>
+
+
+<multimediaData>
+    <multimedia>
+      <type>image</type>
+    </multimedia>
+    <multimedia>
+      <type>video</type>
+    </multimedia>
+    <multimedia>
+      <type>hyperlink</type>
+    </multimedia>
+    <multimedia>
+      <type>database</type>
+    </multimedia>
+    <multimedia>
+      <type>text</type>
+    </multimedia>
+</multimediaData>
+
+
+<categoryData>
+    <category>
+      <webType>social media platform</webType>
+    </category>
+    <category>
+      <webType>professional services</webType>
+    </category>
+    <category>
+      <webType>video streamer</webType>
+    </category>
+    <category>
+      <webType>news</webType>
+    </category>
+    <category>
+      <webType>sports</webType>
+    </category>
+    <category>
+      <webType>banking</webType>
+    </category>
+    <category>
+      <webType>stock website</webType>
+    </category>
+    <category>
+      <webType>search engine</webType>
+    </category>
+    <category>
+      <webType>small business site</webType>
+    </category>
+    <category>
+      <webType>ecommerce</webType>
+    </category>
+    <category>
+      <webType>portfolio</webType>
+    </category>
+    <category>
+      <webType>not for profit</webType>
+    </category>
+    <category>
+      <webType>entertainment</webType>
+    </category>
+    <category>
+      <webType>gaming</webType>
+    </category>
+    <category>
+      <webType>blog</webType>
+    </category>
+</categoryData>
+
+<websiteData>
+
+    <website>
+      <url>google.com</url>
+      <pubDate>1998-09-04</pubDate>
+      <companyID>10001</companyID>
+    </website>
+    <website>
+      <url>amazon.ca</url>
+      <pubDate>1994-07-04</pubDate>
+      <companyID>10002</companyID>
+    </website>
+    <website>
+      <url>facebook.com</url>
+      <pubDate>2004-02-01</pubDate>
+      <companyID>10003</companyID>
+    </website>
+    <website>
+      <url>apple.com/ca</url>
+      <pubDate>1976-05-01</pubDate>
+      <companyID>10004</companyID>
+    </website>
+    <website>
+      <url>cibc.com</url>
+      <pubDate>1961-06-01</pubDate>
+      <companyID>10005</companyID>
+    </website>
+
+</websiteData>
+
+<ceoData>
+
+    <ceo>
+      <employeeID>100001</employeeID>
+      <firstName>Sundar</firstName>
+      <lastName>Pichai</lastName>
+    </ceo>
+    <ceo>
+      <employeeID>100002</employeeID>
+      <firstName>Jeff</firstName>
+      <lastName>Bezos</lastName>
+    </ceo>
+    <ceo>
+      <employeeID>100003</employeeID>
+      <firstName>Mark</firstName>
+      <lastName>Zukerberg</lastName>
+    </ceo>
+    <ceo>
+      <employeeID>100004</employeeID>
+      <firstName>Tim</firstName>
+      <lastName>Cook</lastName>
+    </ceo>
+    <ceo>
+      <employeeID>100005</employeeID>
+      <firstName>Victor</firstName>
+      <lastName>Dodig</lastName>
+    </ceo>
+
+</ceoData>
+
+<companyData>
+    <company>
+      <companyID>100001</companyID>
+      <registeredName>google</registeredName>
+      <countryOrigin>USA</countryOrigin>
+      <numberEmployees>15000</numberEmployees>
+      <ceoID>100001</ceoID>
+      <ck_ceoName>15000 100001</ck_ceoName>
+    </company>
+    <company>
+      <companyID>100001</companyID>
+      <registeredName>amazon</registeredName>
+      <countryOrigin>USA</countryOrigin>
+      <numberEmployees>15000</numberEmployees>
+      <ceoID>100001</ceoID>
+      <ck_ceoName>Jeff Bezos</ck_ceoName>
+    </company>
+    <company>
+      <companyID>100001</companyID>
+      <registeredName>facebook</registeredName>
+      <countryOrigin>USA</countryOrigin>
+      <numberEmployees>15000</numberEmployees>
+      <ceoID>100001</ceoID>
+      <ck_ceoName>Mark Zukerberg</ck_ceoName>
+    </company>
+    <company>
+      <companyID>100001</companyID>
+      <registeredName>apple</registeredName>
+      <countryOrigin>USA</countryOrigin>
+      <numberEmployees>15000</numberEmployees>
+      <ceoID>100001</ceoID>
+      <ck_ceoName>Tim Cook</ck_ceoName>
+    </company>
+    <company>
+      <companyID>100001</companyID>
+      <registeredName>CIBC</registeredName>
+      <countryOrigin>Canada</countryOrigin>
+      <numberEmployees>15000</numberEmployees>
+      <ceoID>100001</ceoID>
+      <ck_ceoName>Victor Dodig</ck_ceoName>
+    </company>
+</companyData>
+
+<developerData>
+    <developer>
+      <employeeID>100001</employeeID>
+      <companyID>100004</companyID>
+      <firstName>Billy</firstName>
+      <lastName>Bob</lastName>
+      <expertise>databases</expertise>
+      <devLead>15000 100001</devLead>
+    </developer>
+    <developer>
+      <employeeID>100022</employeeID>
+      <companyID>100005</companyID>
+      <firstName>GI</firstName>
+      <lastName>Joe</lastName>
+      <expertise>backend</expertise>
+      <devLead>Jeff Bezos</devLead>
+    </developer>
+    <developer>
+      <employeeID>100033</employeeID>
+      <companyID>100006</companyID>
+      <firstName>Diana</firstName>
+      <lastName>Am</lastName>
+      <expertise>backend</expertise>
+      <devLead>Mark Zukerberg</devLead>
+    </developer>
+    <developer>
+      <employeeID>100044</employeeID>
+      <companyID>100007</companyID>
+      <firstName>Ruby</firstName>
+      <lastName>Rose</lastName>
+      <expertise>databases</expertise>
+      <devLead>Tim Cook</devLead>
+    </developer>
+    <developer>
+      <employeeID>100055</employeeID>
+      <companyID>100009</companyID>
+      <firstName>Bruce</firstName>
+      <lastName>Wayne</lastName>
+      <expertise>frontend</expertise>
+      <devLead>Victor Dodig</devLead>
+    </developer>
+</developerData>
+
+<officeLocationData>
+    <officeLocation>
+      <officeID>100005</officeID>
+      <postalCode>S3P 3C9</postalCode>
+      <country>Canada</country>
+      <city>Vancouver</city>
+    </officeLocation>
+    <officeLocation>
+      <officeID>100006</officeID>
+      <postalCode>L2Y 3C9</postalCode>
+      <country>USA</country>
+      <city>New York</city>
+    </officeLocation>
+    <officeLocation>
+      <officeID>100007</officeID>
+      <postalCode>S3P 9I9</postalCode>
+      <country>Canada</country>
+      <city>Musk</city>
+    </officeLocation>
+    <officeLocation>
+      <officeID>100008</officeID>
+      <postalCode>M2K 7H8</postalCode>
+      <country>USA</country>
+      <city>New York</city>
+    </officeLocation>
+    <officeLocation>
+      <officeID>100009</officeID>
+      <postalCode>L2Y 7H8</postalCode>
+      <country>UK</country>
+      <city>London</city>
+    </officeLocation>
+</officeLocationData>
+
+<founderData>
+    <founder>
+      <employeeID>100001</employeeID>
+      <dob>1955-08-28</dob>
+      <firstName>Bill</firstName>
+      <lastName>Gates</lastName>
+    </founder>
+    <founder>
+      <employeeID>100002</employeeID>
+      <dob>1955-02-24</dob>
+      <firstName>Steve</firstName>
+      <lastName>Jobs</lastName>
+    </founder>
+    <founder>
+      <employeeID>100003</employeeID>
+      <dob>1971-06-18</dob>
+      <firstName>Elon</firstName>
+      <lastName>Musk</lastName>
+    </founder>
+    <founder>
+      <employeeID>100004</employeeID>
+      <dob>1990-01-04</dob>
+      <firstName>William</firstName>
+      <lastName>McMaster</lastName>
+    </founder>
+    <founder>
+      <employeeID>100005</employeeID>
+      <dob>1990-01-04</dob>
+      <firstName>Mike</firstName>
+      <lastName>Lezaridis</lastName>
+    </founder>
+</founderData>
+
+<websiteClassifiedData>
+    <websiteClassified>
+      <url>google.com</url>
+      <webType>information site</webType>
+    </websiteClassified>
+    <websiteClassified>
+      <url>amazon.ca</url>
+      <webType>ecommerce</webType>
+    </websiteClassified>
+    <websiteClassified>
+      <url>facebook.com</url>
+      <webType>social media platform</webType>
+    </websiteClassified>
+    <websiteClassified>
+      <url>apple.com/ca</url>
+      <webType>ecommerce</webType>
+    </websiteClassified>
+    <websiteClassified>
+      <url>cibc.com</url>
+      <webType>banking</webType>
+    </websiteClassified>
+</websiteClassifiedData>
+
+<foundedByData>
+    <foundedBy>
+      <employeeID>100001</employeeID>
+      <companyID>10012</companyID>
+    </foundedBy>
+    <foundedBy>
+      <employeeID>100002</employeeID>
+      <companyID>10002</companyID>
+    </foundedBy>
+    <foundedBy>
+      <employeeID>100003</employeeID>
+      <companyID>10006</companyID>
+    </foundedBy>
+    <foundedBy>
+      <employeeID>100004</employeeID>
+      <companyID>100002</companyID>
+    </foundedBy>
+    <foundedBy>
+      <employeeID>100009</employeeID>
+      <companyID>10005</companyID>
+    </foundedBy>
+</foundedByData>
+
+<companyWebsiteData>
+    <companyWebsite>
+      <url>100001</url>
+      <companyID>10012</companyID>
+    </companyWebsite>
+    <companyWebsite>
+      <url>100002</url>
+      <companyID>10002</companyID>
+    </companyWebsite>
+    <companyWebsite>
+      <url>100003</url>
+      <companyID>10006</companyID>
+    </companyWebsite>
+    <companyWebsite>
+      <url>100004</url>
+      <companyID>100002</companyID>
+    </companyWebsite>
+    <companyWebsite>
+      <url>100009</url>
+      <companyID>10005</companyID>
+    </companyWebsite>
+</companyWebsiteData>
+
+<companyDevData>
+    <companyDev>
+      <employeeID>100001</employeeID>
+      <companyID>10012</companyID>
+    </companyDev>
+    <companyDev>
+      <employeeID>100002</employeeID>
+      <companyID>10002</companyID>
+    </companyDev>
+    <companyDev>
+      <employeeID>100003</employeeID>
+      <companyID>10006</companyID>
+    </companyDev>
+    <companyDev>
+      <employeeID>100004</employeeID>
+      <companyID>100002</companyID>
+    </companyDev>
+    <companyDev>
+      <employeeID>100009</employeeID>
+      <companyID>10005</companyID>
+    </companyDev>
+</companyDevData>
+
+<websiteMediaData>
+    <websiteMedia>
+      <url>google.com</url>
+      <type>video</type>
+    </websiteMedia>
+    <websiteMedia>
+      <url>amazon.ca</url>
+      <type>image</type>
+    </websiteMedia>
+    <websiteMedia>
+      <url>facebook.com</url>
+      <type>database</type>
+    </websiteMedia>
+    <websiteMedia>
+      <url>apple.com/ca</url>
+      <type>news</type>
+    </websiteMedia>
+    <websiteMedia>
+      <url>cibc.com</url>
+      <type>banking</type>
+    </websiteMedia>
+</websiteMediaData>
+
+<websiteToolsData>
+    <websiteTools>
+      <url>google.com</url>
+      <toolName>Vue</toolName>
+    </websiteTools>
+    <websiteTools>
+      <url>amazon.ca</url>
+      <toolName>git</toolName>
+    </websiteTools>
+    <websiteTools>
+      <url>facebook.com</url>
+      <toolName>Angular</toolName>
+    </websiteTools>
+    <websiteTools>
+      <url>cibc.com</url>
+      <toolName>JS</toolName>
+    </websiteTools>
+    <websiteTools>
+      <url>apple.com</url>
+      <toolName>Jenkins</toolName>
+    </websiteTools>
+</websiteToolsData>
